@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fancycode}
+\RequirePackage{tango}
+\RequirePackage{listings}
+
+\lstdefinestyle{tangocolors}{
+	rulesepcolor=\color{Aluminium1},
+	keywordstyle={\bfseries\color{DarkSkyBlue}},
+	commentstyle={\color{DarkChameleon}},
+	identifierstyle=\color{Aluminium5},
+	stringstyle={\color{DarkChocolate}},
+}
+
+\lstdefinestyle{tango}{
+	frame=shadowbox,
+	basicstyle=\small\ttfamily,
+	inputencoding=utf8,
+	tabsize=4,
+	breaklines=true,
+	showstringspaces=false,
+	numbers=left,
+	stepnumber=1,
+	numberstyle=\ttfamily,
+	numbersep=8pt,
+	style=tangocolors
+}
+
+\newcommand{\lst}[1]{\lstinline[style=tango]|#1|}

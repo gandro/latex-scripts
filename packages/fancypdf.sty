@@ -1,0 +1,22 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{fancypdf}
+\RequirePackage[pdftex,unicode]{hyperref}
+\RequirePackage{tango}
+
+\hypersetup{
+  colorlinks,
+  linkcolor=Black,
+  citecolor=DarkChameleon,
+  filecolor=DarkSkyBlue,
+  urlcolor=DarkSkyBlue
+}
+
+\makeatletter
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle = {\@title},
+    pdfauthor = {\@author}
+  }
+}
+
+\makeatother
